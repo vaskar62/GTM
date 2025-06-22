@@ -1,0 +1,17 @@
+// copy paste the below code inside Acuity Scheduling (Custom Conversion Tracking)
+
+<script>
+try {
+          var postobject = JSON.stringify({    
+            event: "AcuityEvent",
+            Email: "%email%",
+            ID: "%id%",
+            Type: "%type%",
+            AppointmentType: "%appointmentType%",
+            FullName: "%calendar%",            
+          });
+          window.parent.parent.postMessage(postobject,  "*");
+     } catch(e){
+       window.console.log('error')
+     }
+</script>
